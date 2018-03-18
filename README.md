@@ -13,18 +13,31 @@ https://git-scm.com/download/win
 ```
 
 ```
-# Download Miniconda (Python 3.6) from:
-https://conda.io/miniconda.html
-```
+# Download and install Miniconda (Python 3.6):
 
-```
-# Install Miniconda by opening the terminal and run this shell script (Mac & Linux)
+# Mac
+# Download the package
+wget https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
 bash Miniconda3-latest-MacOSX-x86_64.sh
 ```
 
+Keep pressing Enter until it asks you to answer (yes/no), answer yes.
+```
+# once you finished installing, remove the shell script
+rm Miniconda3-latest-MacOSX-x86_64.sh
+
+# Windows go to https://conda.io/miniconda.html and download Python 3.6 installer
+```
+
+
+Close this terminal and reopen again for conda to work!
+
 ```
 # git clone the repo
-git clone git@github.com:marcoleewow/deep-learning-demo.git
+git clone https://github.com/marcoleewow/deep-learning-demo.git
+```
+```
+# change directory
 cd deep-learning-demo
 ```
 
@@ -35,7 +48,7 @@ conda env create -f environment.yml
 
 
 ```
-# activate the conda env
+# activate the conda environment
 Windows: activate myenv
 macOS and Linux: source activate myenv
 ```
