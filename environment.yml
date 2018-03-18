@@ -31,3 +31,4 @@ dependencies:
   - face_recognition==1.2.1
   - pyyaml==3.12
   - torch==0.3.0.post4
+  - dlib==19.9.0
