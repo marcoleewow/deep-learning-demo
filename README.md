@@ -1,6 +1,6 @@
 # Deep Learning Demo
 
-This repo is for showing deep learning demo.
+Various projects for demonstrating deep learning technology.
 
 ## Installation
 ```
