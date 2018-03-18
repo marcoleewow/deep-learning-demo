@@ -1,0 +1,33 @@
+name: deep-learning-demo
+
+dependencies:
+- jpeg=9b=0
+- matplotlib=2.0.2
+- numpy=1.14.0
+- openssl=1.0.2
+- pillow=5.0.0
+- pip=9.0.1
+- py=1.4.34
+- pyparsing=2.2.0
+- pyqt=5.6.0=py36_2
+- pytest=3.2.1
+- python=3.6.4
+- python-dateutil=2.6.1
+- pytz=2017.2
+- qt=5.6.2
+- scipy==1.0.0
+- setuptools=27.2.0
+- sip=4.18
+- six=1.10.0
+- sqlite=3.20.1
+- wheel=0.30.0
+- pip:
+  - markdown==2.2.0
+  - protobuf==3.3.0
+  - tensorflow==1.2.0
+  - werkzeug==0.12.2
+  - chatterbot==0.8.4
+  - opencv-python==3.4.0.12
+  - face_recognition==1.2.1
+  - pyyaml==3.12
+  - torch==0.3.0.post4
