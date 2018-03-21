@@ -1,5 +1,6 @@
 import face_recognition
 import cv2
+import glob
 
 # This is a demo of running face recognition on live video from your webcam. It's a little more complicated than the
 # other example, but it includes some basic performance tweaks to make things run a lot faster:
@@ -13,23 +14,15 @@ import cv2
 # Get a reference to webcam #0 (the default one)
 video_capture = cv2.VideoCapture(0)
 
-# Load a sample picture and learn how to recognize it.
-obama_image = face_recognition.load_image_file("obama.jpg")
-obama_face_encoding = face_recognition.face_encodings(obama_image)[0]
+local_image_fns = glob.glob('*.jpg')
 
-# Load a second sample picture and learn how to recognize it.
-biden_image = face_recognition.load_image_file("biden.jpg")
-biden_face_encoding = face_recognition.face_encodings(biden_image)[0]
+known_face_encodings = []
+known_face_names = []
 
-# Create arrays of known face encodings and their names
-known_face_encodings = [
-    obama_face_encoding,
-    biden_face_encoding
-]
-known_face_names = [
-    "Barack Obama",
-    "Joe Biden"
-]
+for fn in local_image_fns:
+    image = face_recognition.load_image_file(fn)
+    known_face_encodings.append(face_recognition.face_encodings(image)[0])
+    known_face_names.append(fn.replace('.jpg', ''))
 
 # Initialize some variables
 face_locations = []
